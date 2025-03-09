@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       
+        <script>
+            // เมื่อโหลดหน้าจอเสร็จ จะดึงค่าจาก Local Storage
+            document.addEventListener('DOMContentLoaded', function() {
+                const selectedName = localStorage.getItem('selectedName'); // ดึงค่าที่ถูกเก็บไว้
+                const displayName = document.getElementById('displayName');
+    
+                // ถ้ามีค่าที่ถูกส่งมา จะแสดงผล
+                if (selectedName) {
+                    displayName.innerText = selectedName;
+                } else {
+                    displayName.innerText = "No name was selected!";
+                }
+            });
+        </script>
+         <style>
+            /* ปรับพื้นหลังของทั้งหน้าเว็บ */
+            body {
+                background-color: #f0f0f0; /* เปลี่ยนสีพื้นหลัง */
+                color: #333; /* เปลี่ยนสีตัวอักษร */
+                font-family: Arial, sans-serif; /* เปลี่ยนฟอนต์ */
+                text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+            }
+    
+            /* ปรับตัวอักษรของ h1 */
+            h1 {
+                font-size: 36px;
+                color: #ff6600; /* เปลี่ยนสีของ h1 */
+            }
+    
+            /* ปรับตัวอักษรของ p */
+            p {
+                font-size: 50px;
+                color: #555;
+            }
+            button {
+    
+    width: 400px; /* ความกว้างของปุ่ม */
+    height: 200px; /* ความสูงของปุ่ม */
+    font-size: 150px; /* ขนาดตัวอักษรในปุ่ม */
+    padding: 10px; /* ระยะห่างภายในปุ่ม */
+    border-radius: 10px; /* มุมมนของปุ่ม */
+    color: rgb(97, 24, 46);
+    
+    
+}
+        </style>
+
+    </head>
+    <body>
+        <div class="size" >
+           
+            <p id="displayName"></p>
+           <p>"Do you remember when you were a child?"</p> 
+         <br>
+           <br>
+           
+            
+            <br>
+            <br>
+             
+             
+
+                <button onclick="location.href='/HBD01/Home02.html'">YES</button> 
+                <button onclick="location.href='/HBD01/Home02.html'">YES</button> <br>
+                
+   
+             </div>
+       
+    
+    </body>
+</html>

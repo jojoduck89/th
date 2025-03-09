@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> home01</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="home.css"> <!-- เชื่อมcss home-->
+
+    <script>
+        // เมื่อโหลดหน้าจอเสร็จ จะดึงค่าจาก Local Storage
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedName = localStorage.getItem('selectedName'); // ดึงค่าที่ถูกเก็บไว้
+            const displayName = document.getElementById('displayName');
+
+            // ถ้ามีค่าที่ถูกส่งมา จะแสดงผล
+            if (selectedName) {
+                displayName.innerText = selectedName;
+            } else {
+                displayName.innerText = "No name was selected!";
+            }
+        });
+    </script>
+       
+    </head>
+    <body>
+        
+       
+           
+      <div class="size" >
+           
+            <p id="displayName"></p>
+            
+           " Is today your birthday?"<br>
+           <br>
+           "Are you 18 years old?"
+            
+            <br>
+            <br>
+             
+             
+
+                <button onclick="location.href='/HBD01/Home02.html'">YES</button> 
+                <button onclick="location.href='/HBD01/Home02.html'">YES</button> <br>
+                
+           
+            <script>
+                function displayDateTime() {
+                    const now = new Date();
+                    const options = { date: 'long' }; // Day, Month, Date
+                    const date = now.toLocaleDateString('th', options);
+                    const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                    document.getElementById('datetime').innerText = `${date}, ${time}`;
+                }
+        
+                displayDateTime(); // Display when page loads
+                setInterval(displayDateTime, 1000); // Update every second
+            </script>
+             </div>
+   
+    </body>
+</html>
